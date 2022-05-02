@@ -64,6 +64,9 @@ function resetGameProperties() {
 }
 
 function startGame() {
+  if (message.classList.contains('visible')) {
+    message.classList.remove('visible')
+  }
   timeInterval = setInterval(increasTime, 1000)
 }
 
@@ -91,7 +94,6 @@ function creatInsect() {
     <img src="${selectedInsect.src}" alt="${selectedInsect.alt} style="transform:rotate(${Math.random() * 360}deg)"/>
   `
   const { x, y } = getRandomLocation()
-  console.log(x, y)
   insect.style.top = `${y}px`
   insect.style.left = `${x}px`
 
@@ -111,7 +113,7 @@ function catchInsect() {
 
 function increasScore() {
   score++
-  if (score > 19) {
+  if (score > 3) {
     message.classList.add('visible')
   }
   scoreEl.innerHTML = `Score: ${score}`
