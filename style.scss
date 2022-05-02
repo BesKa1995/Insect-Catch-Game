@@ -89,19 +89,40 @@ body {
   position: relative;
 }
 
+.game-interface {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+  &>* {
+    margin: 0 1rem;
+  }
+}
+
 .time,
 .score {
-  position: absolute;
-  top: 2rem;
-
+  // position: absolute;
+  // top: 2rem;
+  @media (max-width:600px) {
+    line-height: 2;
+    font-size: 1.2rem;
+  }
+  order: 3;
 }
 
 .end-game-btn {
-  position: absolute;
-  top: 2rem;
+  // position: absolute;
+  // top: 2rem;
+  @media (max-width:600px) {
+    font-size: 1rem;
+  }
+  order: 2;
 }
 .time {
   left: 2rem;
+  order: 1;
 }
 
 .score {
@@ -147,5 +168,12 @@ body {
   img {
     width: 10rem;
     height: 10rem;
+  }
+  @media (max-width:600px) {
+    
+  img {
+    width: 7rem;
+    height: 7rem;
+  }
   }
 }

@@ -86,19 +86,45 @@ body {
   position: relative;
 }
 
+.game-interface {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+}
+
+.game-interface > * {
+  margin: 0 1rem;
+}
+
 .time,
 .score {
-  position: absolute;
-  top: 2rem;
+  order: 3;
+}
+
+@media (max-width: 600px) {
+  .time,
+  .score {
+    line-height: 2;
+    font-size: 1.2rem;
+  }
 }
 
 .end-game-btn {
-  position: absolute;
-  top: 2rem;
+  order: 2;
+}
+
+@media (max-width: 600px) {
+  .end-game-btn {
+    font-size: 1rem;
+  }
 }
 
 .time {
   left: 2rem;
+  order: 1;
 }
 
 .score {
@@ -145,5 +171,12 @@ body {
 .insect img {
   width: 10rem;
   height: 10rem;
+}
+
+@media (max-width: 600px) {
+  .insect img {
+    width: 7rem;
+    height: 7rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
