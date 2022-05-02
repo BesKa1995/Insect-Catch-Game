@@ -113,7 +113,7 @@ function catchInsect() {
 
 function increasScore() {
   score++
-  if (score > 3) {
+  if (score > 20) {
     message.classList.add('visible')
   }
   scoreEl.innerHTML = `Score: ${score}`
