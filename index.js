@@ -16,7 +16,7 @@ let selectedInsect = {}
 let timeInterval = 0
 let creatInsectTimeOut = 0
 let defaultTime = `Time: 00:00`
-let defaultScore = `Score 0`
+let defaultScore = `Score: 0`
 
 startBtn.addEventListener('click', () => {
   screens[0].classList.add('up')
